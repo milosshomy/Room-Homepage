@@ -230,6 +230,10 @@ nav.active,
   background-color: var(--dark-gray-clr);
 }
 
+.content-slider {
+  transition: 500ms ease-in-out;
+}
+
 .content-slide {
   flex: 0 0 100%;
 }
