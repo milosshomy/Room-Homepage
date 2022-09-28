@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="img/favicon-32x32.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Room Homepage</title>
+  </head>
+  <body>
+    <!-- Header -->
+
+    <header class="header">
+      <div class="d-flex align-items-center">
+        <!-- Hamburger -->
+
+        <div class="hamburger d-block d-md-none">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="logo">
+          <a href="#">
+            <img src="img/logo.svg" alt="Logo" />
+          </a>
+        </div>
+
+        <!-- Navigation -->
+
+        <nav>
+          <ul class="menu">
+            <li class="menu-item"><a href="#" class="menu-link">home</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">shop</a></li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">about</a>
+            </li>
+            <li class="menu-item"><a href="#" class="menu-link">contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="overlay"></div>
+    </header>
+
+    <!-- Main -->
+
+    <main>
+      <div class="container-fluid">
+        <div class="row">
+          <div
+            class="col-12 col-lg-7 col-space p-0 position-relative overflow-hidden"
+          >
+            <div class="slider-images">
+              <picture class="slider-image">
+                <source
+                  media="(min-width:768px)"
+                  srcset="img/desktop-image-hero-1.jpg"
+                />
+                <img
+                  src="img/mobile-image-hero-1.jpg"
+                  alt="A table with chairs"
+                />
+              </picture>
+              <picture class="slider-image">
+                <source
+                  media="(min-width:768px)"
+                  srcset="img/desktop-image-hero-2.jpg"
+                />
+                <img
+                  src="img/mobile-image-hero-2.jpg"
+                  alt="A picture of chairs"
+                />
+              </picture>
+              <picture class="slider-image">
+                <source
+                  media="(min-width:768px)"
+                  srcset="img/desktop-image-hero-3.jpg"
+                />
+                <img src="img/mobile-image-hero-3.jpg" alt="A chair" />
+              </picture>
+            </div>
+
+            <div class="slider-mobile-buttons d-block d-lg-none">
+              <button type="button" class="slider-btn slider-btn-prev-mob">
+                <img src="img/icon-angle-left.svg" alt="Left arrow icon" />
+              </button>
+              <button type="button" class="slider-btn slider-btn-next-mob">
+                <img src="img/icon-angle-right.svg" alt="Right arrow icon" />
+              </button>
+            </div>
+          </div>
+          <div
+            class="col-12 col-lg-5 p-0 position-relative col-space d-flex align-items-center"
+          >
+            <div class="mx-4 mx-lg-5 overflow-hidden">
+              <div class="content-slider d-flex">
+                <div class="content-slide">
+                  <h1 class="title">Discover innovative ways to decorate</h1>
+                  <p class="text">
+                    We provide unmatched quality, comfort, and style for
+                    property owners across the country. Our experts combine form
+                    and function in bringing your vision to life. Create a room
+                    in your own style with our collection and make your property
+                    a reflection of you and what you love.
+                  </p>
+                  <button type="button" class="primary-btn">
+                    Shop Now
+                    <img src="img/icon-arrow.svg" alt="Arrow icon" />
+                  </button>
+                </div>
+                <div class="content-slide">
+                  <h1 class="title">We are available all across the globe</h1>
+                  <p class="text">
+                    With stores all over the world, it&apos;s easy for you to
+                    find furniture for your home or place of business. Locally,
+                    we&apos;re in most major cities throughout the country. Find
+                    the branch nearest you using our store locator. Any
+                    questions? Don&apos;t hesitate to contact us today.
+                  </p>
+                  <button type="button" class="primary-btn">
+                    Shop Now
+                    <img src="img/icon-arrow.svg" alt="Arrow icon" />
+                  </button>
+                </div>
+                <div class="content-slide">
+                  <h1 class="title">Manufactured with the best materials</h1>
+                  <p class="text">
+                    Our modern furniture store provide a high level of quality.
+                    Our company has invested in advanced technology to ensure
+                    that every product is made as perfect and as consistent as
+                    possible. With three decades of experience in this industry,
+                    we understand what customer want for their home and office.
+                  </p>
+                  <button type="button" class="primary-btn">
+                    Shop Now
+                    <img src="img/icon-arrow.svg" alt="Arrow icon" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-buttons d-none d-lg-block">
+              <button type="button" class="slider-btn slider-btn-prev">
+                <img src="img/icon-angle-left.svg" alt="Left arrow icon" />
+              </button>
+              <button type="button" class="slider-btn slider-btn-next">
+                <img src="img/icon-angle-right.svg" alt="Right arrow icon" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 col-lg-4 px-0 pe-lg-3 col-space">
+              <figure>
+                <img src="img/image-about-dark.jpg" alt="Table with chairs" />
+              </figure>
+            </div>
+            <div class="col-12 col-lg-4 col-space">
+              <div
+                class="content-wrapper d-flex flex-column justify-content-center h-100"
+              >
+                <h2 class="sub-title">About Our Furniture</h2>
+                <p class="text m-0">
+                  Our multifunctional collection blends design and function to
+                  suit your individual taste. Make each room unique, or pick a
+                  cohesive theme that best express your interests and what
+                  inspires you. Find the furniture pieces you need, from
+                  traditional to contemporary styles or anything in between.
+                  Product specialists are available to help you create your
+                  dream space.
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 px-0 ps-lg-3">
+              <figure class="h-100">
+                <img
+                  src="img/image-about-light.jpg"
+                  alt="A white chair"
+                  class="h-100"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

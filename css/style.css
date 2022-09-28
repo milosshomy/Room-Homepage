@@ -1,0 +1,319 @@
+/* Reset */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+hr,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Variables */
+
+:root {
+  --dark-gray-clr: hsl(0, 0%, 63%);
+  --black-clr: hsl(0, 0%, 0%);
+  --white-clr: hsl(0, 0%, 100%);
+  --very-dark-gray-clr: hsl(0, 0%, 27%);
+  --fs: 12px;
+  --primary-ff: "League Spartan", sans-serif;
+}
+
+body {
+  font-family: var(--primary-ff);
+  font-size: var(--fs);
+  font-weight: 500;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  padding-left: 50px;
+  z-index: 1;
+}
+
+.logo {
+  margin-right: 50px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.menu-link {
+  color: var(--white-clr);
+  position: relative;
+}
+
+.menu-link::before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: var(--white-clr);
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  translate: -50% 0;
+  transition: 200ms ease-in-out;
+}
+
+.menu-link:hover {
+  color: var(--white-clr);
+}
+
+.menu-link:hover::before {
+  width: 100%;
+}
+
+.hamburger {
+  width: 40px;
+  height: 21px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background-color: var(--white-clr);
+  border-radius: 100vh;
+  position: absolute;
+  transition: 200ms ease-in-out;
+}
+
+.hamburger span:first-child {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 9px;
+}
+
+.hamburger span:last-child {
+  top: 18px;
+}
+
+.hamburger.open span {
+  background-color: var(--dark-gray-clr);
+}
+
+.hamburger.open span:first-child {
+  rotate: 45deg;
+  top: 9px;
+}
+
+.hamburger.open span:nth-child(2) {
+  translate: -50px;
+  opacity: 0;
+}
+
+.hamburger.open span:last-child {
+  rotate: -45deg;
+  top: 9px;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  z-index: -1;
+  translate: 0% 100%;
+  transition: 200ms ease-in-out;
+}
+
+nav.active,
+.overlay.active {
+  translate: 0;
+}
+
+.slider-images {
+  display: flex;
+  transition: 500ms ease-in-out;
+}
+
+.slider-image {
+  flex: 0 0 100%;
+}
+
+.slider-image img {
+  width: 100%;
+}
+
+.wrapper {
+  padding: 0px 100px;
+  max-width: 100%;
+}
+
+.title {
+  color: var(--black-clr);
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 40px;
+}
+
+.text {
+  color: var(--dark-gray-clr);
+  margin-bottom: 20px;
+}
+
+.primary-btn {
+  color: var(--black-clr);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  transition: 200ms ease-in-out;
+}
+
+.primary-btn img {
+  transition: 200ms ease-in-out;
+}
+
+.primary-btn:hover {
+  color: var(--dark-gray-clr);
+}
+
+.primary-btn:hover img {
+  filter: opacity(50%);
+}
+
+.slider-buttons {
+  background-color: var(--black-clr);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.slider-btn {
+  background-color: var(--black-clr);
+  padding: 30px;
+  transition: 200ms ease-in-out;
+}
+
+.slider-btn:hover {
+  background-color: var(--dark-gray-clr);
+}
+
+.content-slide {
+  flex: 0 0 100%;
+}
+
+.slider-mobile-buttons {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: var(--black-clr);
+}
+
+.sub-title {
+  color: var(--black-clr);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+figure img {
+  width: 100%;
+}
+
+/* Media Queries */
+
+@media all and (max-width: 1200px) {
+  .wrapper {
+    padding: 0px 50px;
+  }
+
+  .primary-btn {
+    float: right;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .primary-btn {
+    float: none;
+  }
+
+  .col-space {
+    margin-bottom: 50px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .header {
+    left: 0;
+    top: 0;
+    padding: 50px;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+  }
+
+  nav {
+    position: absolute;
+    background-color: var(--white-clr);
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    translate: 0 -150%;
+    transition: 200ms ease-in-out;
+  }
+
+  .menu {
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    translate: -50% -50%;
+  }
+
+  .menu-link {
+    color: var(--black-clr);
+    font-weight: 700;
+  }
+
+  .menu-link:hover {
+    color: var(--black-clr);
+  }
+
+  .menu-link::before {
+    background-color: var(--black-clr);
+  }
+}
